@@ -59,9 +59,8 @@ function calculateDiscount(redemption) {
 // MY CODE
 //  console.log(substr.join(' '));
 let text = "";
-let i;
-for (i = 0; i < cars.length; i++) {
-  text += cars[i] + " ";
+for (let i = 0; i < substr.length; i++) {
+  text += substr[i] + " ";
 console.log(text);
 }
 
@@ -77,8 +76,7 @@ console.log(text);
   };
   //  const sum = personIncomes.salary + personIncomes.rent + personIncomes.interestOnDeposit + personIncomes.otherExpences
 let sum = 0;
-let x
-for (x in personIncomes) {
+for (let x in personIncomes) {
   sum += personIncomes[x];
 }
 }
