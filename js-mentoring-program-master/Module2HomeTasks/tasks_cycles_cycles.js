@@ -57,7 +57,12 @@ function calculateDiscount(redemption) {
 {
   const substr = ["I", " love", " JS"];
 // MY CODE
-    console.log(substr.join(' '));
+//  console.log(substr.join(' '));
+let text = "";
+let i;
+for (i = 0; i < cars.length; i++) {
+  text += cars[i] + " ";
+console.log(text);
 }
 
 /**
@@ -70,7 +75,12 @@ function calculateDiscount(redemption) {
     interestOnDeposit: 250,
     otherExpences: -300
   };
-    const sum = personIncomes.salary + personIncomes.rent + personIncomes.interestOnDeposit + personIncomes.otherExpences
+  //  const sum = personIncomes.salary + personIncomes.rent + personIncomes.interestOnDeposit + personIncomes.otherExpences
+let sum = 0;
+let x
+for (x in personIncomes) {
+  sum += personIncomes[x];
+}
 }
 
 //module.exports = calculateDiscount;
