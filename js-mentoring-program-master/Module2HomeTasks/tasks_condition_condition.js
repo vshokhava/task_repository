@@ -23,14 +23,15 @@ let result = (a + b) < 4 ? console.log('wrong') : console.log('too much');
  * Task 2 - ternary operator
  */
 {
-    const x = 3;
-    const y = 7;
-    let z;
+const x = 3;
+const y = 7;
+let z;
 if (a < 10 && b < 10) {
     z = a + b;
 } else {
 z = a * b;
 };
+}
 // Task2 - ternary operator 
 let z = (a < 10 && b < 10) ? a + b : a * b
 }
