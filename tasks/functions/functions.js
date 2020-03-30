@@ -25,7 +25,7 @@ add (2, 8);
       firstName: firstName,
       lastName: lastName
   };
-    return(obj.firstName + " " + obj.lastName);
+    return obj.firstName + " " + obj.lastName;
   }
   getFullName("John", "Dou");
 /**
@@ -60,8 +60,8 @@ getShortest(wordArray);
  /* write function that returns word google with given numbers of "o" symbols
  * e.g getGoogle(5) should return "gooooogle"
  */
-let letter = 'o'
 function getGoogle(n) {
+  let letter = 'o'
    return ('g' + letter.repeat(n) + 'gle');
 
 };
@@ -79,24 +79,13 @@ getGoogle(3)
  *    age: 42
  * }
  */
-/*function getUser(firstName = null, lastName = null, age = null) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
-  
-  var person = new getUser("John", "Doe", 42);
-  console.log (person);
-  var person = new getUser("John", "Doe");
-  console.log (person);
-*/
+
 function getUser(firstName = null, lastName = null, age = null) {
-  var obj = {
-    firstName: firstName,
-    lastName: lastName,
-    age: age
+  return {
+    firstName,
+    lastName,
+    age
 };
-  return obj;
 };
 getUser("John", "Dou", 42);
 
@@ -112,8 +101,7 @@ const path = [
 ];
 function getTotalPath(arr){
       let total = 0;
-      let i;
-       for (i = 0; i < arr.length; i++) {
+       for (let i = 0; i < arr.length; i++) {
               total += arr[i].distance;
             }
       return total;
