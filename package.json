@@ -19,12 +19,11 @@
   "authors": [
     "Dzmitry_Shaplyka@epam.com",
     "Oleksandr_Halichenko@epam.com"
-    "Vasilisa_Shokhava@epam.com"
   ],
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.0.1",
+    "mocha": "^7.1.1",
     "sinon": "latest"
   }
 }
