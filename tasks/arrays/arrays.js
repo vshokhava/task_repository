@@ -4,7 +4,7 @@
  * @return {Array} - char names
  */
 function getCharactersNames(chars, ) {
-  let result = chars.map(({ name }) => name);
+  let result = chars.map(el => el.name);
   return result;
 }
 
@@ -13,9 +13,8 @@ function getCharactersNames(chars, ) {
 * @param {Array} chars
 */
 function printCharacterNames(chars) {
-  let result = chars.map(({ name }) => name);
-  return result;
-
+ let result =  chars.forEach(obj => console.log(obj.name));
+return result;
 }
 
 /**
@@ -27,8 +26,7 @@ function getNonHumanCharacters(chars) {
   let result = chars.filter(obj => {
       return obj.species !== 'Human'
     });
-    let newArray = Array.from(result);
-    return newArray;
+    return result;
 }
 
 /**
@@ -37,9 +35,7 @@ function getNonHumanCharacters(chars) {
 * @return {Object} - Jerry object
 */
 function getJerryInfo(chars) {
-  let result = chars.find(obj => {
-      return obj.name === 'Jerry Smith'
-    });
+let result = chars.find(char => char.name === 'Jerry Smith');
     return result;
 }
 
@@ -50,14 +46,9 @@ function getJerryInfo(chars) {
 * @return {boolean}
 */
 function isAllHuman(chars) {
-  let result = chars.find(o => o.species !== 'Human');
-  if (result = 0) {
-      return true;
-  }
-  else {
-  return false;
-}
-}
+  let result = chars.every(o => o.species == 'Human') ? true : false;
+ return result;
+};
 
 /**
 * check if there are any Fish-Person characters. return true if any, false if not
@@ -65,12 +56,8 @@ function isAllHuman(chars) {
 * @return {boolean}
 */
 function isAnyFishPerson(chars) {
-  if (chars => chars.type === 'Fish-Person') {
-  return true;
-}
-else {
-  return false;
-}
+  let result = chars.some(obj => obj.type === 'Fish-Person') ? true : false
+  return result;
 }
 
 /**
