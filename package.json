@@ -24,6 +24,6 @@
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.1",
-    "sinon": "latest"
+    "sinon": "^9.0.1"
   }
 }
