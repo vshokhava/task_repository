@@ -18,4 +18,3 @@ describe('student', () => {
     it('should have getGrade method', () => expect(student.getGrade()).to.equal(student.grade));
     it('should have getFullName method', () => expect(student.getFullName()).to.equal(`${student.firstName} ${student.lastName}`));
 });
-
