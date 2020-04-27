@@ -13,7 +13,7 @@ function callbackFunctionError(cb) {
 }
 
 function promiseFunctionError() {
-    return Promise.reject(new Error("Error"));
+ return Promise.reject(new Error("Error"));
 }
 
 module.exports = {
