@@ -16,19 +16,18 @@
  */
 const myObj = require ('./test.json');
 const fs = require('fs');
-let allEntries = myObj.list.entries;
 
-let allEntries1 = [];
- allEntries.forEach(obj => {
-    let name = obj.entry.name.slice(0,-5);
+let object = myObj.list.entries.map(item => {
+    let name = item.entry.name;
     let str = "http://doc.epam.com/";
-    let res = str.concat(name);
+    let name1 = name.replace(/.html/g, '');
+    let res = str.concat(name1);
     let newObj = {
-        docId: res
-    }
-    allEntries1.unshift(newObj);
-    });
-    const parsed = JSON.stringify(allEntries1,null, '\t');
+                docId: res
+            };
+            return newObj;
+});
+const parsed = JSON.stringify(object,null, '\t');
     fs.writeFile('./parsed.json', parsed, err => {
         if (err) {
             throw err;
